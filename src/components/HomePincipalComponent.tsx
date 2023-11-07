@@ -12,7 +12,7 @@ function HomePincipal({ title, paragraph }: HomeProps) {
   return (
     <section>
       <div className="containerHome">
-        <div>
+        <div className="centerDesktop">
           <h1
             dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(title) }}
             className="titleHome"

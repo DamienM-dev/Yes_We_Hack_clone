@@ -86,10 +86,12 @@
 
   .blockButton {
     text-align: center;
-    margin-bottom: 14px;
+
     border-radius: 8px;
     padding: 12px 32px;
     transition: transform 0.1s ease;
+    max-width: 700px;
+    margin: 14px auto;
 
     &:hover {
       transform: scale(1.05, 1.05);
@@ -116,4 +118,46 @@
 
 .buttonSecondary {
   border: 1px solid $redColor;
+}
+
+// ---------- MEDIA QUERIES -----------
+
+@include desktop-mini {
+  // ---------- HOME STYLE ----------
+
+  .containerPrincipalHome {
+    .containerHome {
+      .centerDesktop {
+        width: 500px;
+        margin: auto;
+      }
+      .titleHome {
+        line-height: 48px;
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+@include desktop-down {
+  // ---------- HOME STYLE ----------
+  .containerPrincipalHome {
+    .containerHome {
+      padding: 160px 128px;
+
+      .centerDesktop {
+        width: auto;
+      }
+    }
+  }
+
+  // --------- BUTTON --------
+  .containerButton {
+    display: flex;
+  }
+  .containerButton {
+    .blockButton {
+      margin: 14px;
+    }
+  }
 }
