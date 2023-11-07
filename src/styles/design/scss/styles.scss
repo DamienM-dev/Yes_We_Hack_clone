@@ -1,0 +1,119 @@
+@import "variable";
+
+// ---------- HOME STYLE ----------
+.containerPrincipalHome {
+  background: {
+    image: url("/images/bg-principal.webp");
+    size: cover;
+    position: center center;
+  }
+  .containerHome {
+    padding: 40px 24px 96px 24px;
+
+    .titleHome,
+    .secondaryTitle {
+      color: $whiteColor;
+    }
+    .titleHome {
+      line-height: 40px;
+
+      font: {
+        family: $fontGilroy;
+        size: 36px;
+        weight: bold;
+      }
+    }
+    .secondaryTitle {
+      line-height: 28px;
+
+      font: {
+        size: 20px;
+        weight: 600;
+      }
+    }
+  }
+}
+
+// ---------- UTILITIES STYLE ----------
+
+.containerPrincipalUtilities {
+  padding: 80px 0;
+
+  background-image: url("/images/bg-points.webp");
+
+  .containerUtilities {
+    padding: 0px 24px;
+    margin-bottom: 50px;
+
+    .blocksUtilities {
+      display: flex;
+
+      .logoUtilities {
+        margin-right: 16px;
+      }
+
+      .firstTitle {
+        color: $redColor;
+      }
+
+      .firstTitle,
+      .secondTitle {
+        font: {
+          family: $fontPrincipal;
+          size: 24px;
+        }
+
+        line-height: 32px;
+      }
+    }
+    .paragrahUtilities {
+      line-height: 28px;
+      text-align: justify;
+      opacity: 70%;
+
+      font: {
+        family: $fontSecondary;
+        size: 20px;
+      }
+    }
+  }
+}
+
+// ---------- BUTTON STYLE ----------
+
+.containerButton {
+  margin-top: 40px;
+
+  .blockButton {
+    text-align: center;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    padding: 12px 32px;
+    transition: transform 0.1s ease;
+
+    &:hover {
+      transform: scale(1.05, 1.05);
+      transition: transform 0.3s ease;
+    }
+
+    .buttonStyle {
+      color: $whiteColor;
+      line-height: 28px;
+      text-transform: uppercase;
+
+      font: {
+        family: $fontPrincipal;
+        size: 18px;
+      }
+    }
+  }
+}
+// --------- STYLE FOR DIFFERENT BUTTON ---------
+
+.buttonPrimary {
+  background-color: $redColor;
+}
+
+.buttonSecondary {
+  border: 1px solid $redColor;
+}
