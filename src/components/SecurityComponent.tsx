@@ -22,7 +22,9 @@ function Security({ img, alt, title, subtitle, paragraph }: SecurityProps) {
             <div className="secondTitle">{subtitle}</div>
           </div>
         </div>
-        <p className="paragrahUtilities">{paragraph}</p>
+        <div>
+          <p className="paragrahUtilities">{paragraph}</p>
+        </div>
       </div>
     </section>
   );

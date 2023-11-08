@@ -1,6 +1,7 @@
 @import "variable";
 
 // ---------- HOME STYLE ----------
+
 .containerPrincipalHome {
   background: {
     image: url("/images/bg-principal.webp");
@@ -47,6 +48,8 @@
 
     .blocksUtilities {
       display: flex;
+      max-width: 576px;
+      margin: 20px auto 0px;
 
       .logoUtilities {
         margin-right: 16px;
@@ -67,6 +70,8 @@
       }
     }
     .paragrahUtilities {
+      max-width: 576px;
+      margin: 20px auto 0px;
       line-height: 28px;
       text-align: justify;
       opacity: 70%;
@@ -137,10 +142,20 @@
       }
     }
   }
+
+  // ---------- UTILITIES STYLE ----------
+  .containerPrincipalUtilities {
+    display: flex;
+    padding: {
+      right: 64px;
+      left: 64px;
+    }
+  }
 }
 
 @include desktop-down {
   // ---------- HOME STYLE ----------
+
   .containerPrincipalHome {
     .containerHome {
       padding: 160px 128px;
@@ -152,6 +167,7 @@
   }
 
   // --------- BUTTON --------
+
   .containerButton {
     display: flex;
   }
