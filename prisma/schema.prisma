@@ -31,3 +31,12 @@ model HomePrimary {
     title String
     paragraph String
 }
+
+model Plateforme {
+    id Int @id @default(autoincrement())
+    img String
+    alt String
+    title String
+    list String
+    paragraph String
+}

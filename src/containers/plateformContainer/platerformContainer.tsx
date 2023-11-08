@@ -1,28 +1,75 @@
+import { useState } from "react";
+import Button from "~/components/Button";
 import BugBounty from "~/components/plateformes/BugBounty";
+import UsePlateform from "~/hooks/usePlateform";
+import Modal from "@mui/material/Modal";
+import { string } from "zod";
 
 const title_principal = "UNE PLATEFORME DE GESTION DES VULNÉRABILITÉS COMPLÈTE";
+const subtitle_back =
+  "NOUS PROTÉGEONS Des organisations de toutes tailles et de tous secteurs";
 
-//--------- BUG BOUNTY --------
+type IdChoice = {
+  idBlock: number;
+};
 
-const title_BugBounty = "UNLEASH THE POWER OF OUR HUNTERS";
-const paragraphe_BugBounty =
-  "Appuyez-vous sur les compétences de dizaines de milliers de hackers éthiques vérifiés – des experts dans la détection de vulnérabilités dans les environnements les plus variés. Profitez d’un modèle crowdsourcé et payez au résultat, au lieu du temps passé. Alignez votre stratégie de tests sur vos exigences sécuritaires, informatiques et métiers.";
-const href_BugBounty = "/images/bugBounty.webp";
-const alt_bugBounty = "Un graphique de bug";
+export default function PlateformContainer() {
+  const { plateforms, error } = UsePlateform();
+  const [idBlock, setIdblock] = useState<IdChoice>({ idBlock: 1 });
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [switchName, setSwitchName] = useState<string>("Bug Bounty");
 
-export default function plateformContainer() {
+  if (error) {
+    return <div>Erreur : {error.message}</div>;
+  }
+
+  const handleOpenModal = () => setModalOpen(true);
+  const handleCloseModal = () => setModalOpen(false);
+
   return (
-    <article>
+    <article className="containerPlateform">
       <div>
         <h2>{title_principal}</h2>
         <div>
-          <BugBounty
-            title={title_BugBounty}
-            alt={alt_bugBounty}
-            img={href_BugBounty}
-            paragraph={paragraphe_BugBounty}
-          />
+          <span className="listPlateform" onClick={handleOpenModal}>
+            {switchName}
+          </span>
+
+          <Modal open={isModalOpen} onClose={handleCloseModal}>
+            <div>
+              {plateforms.map((plateform) => (
+                <div
+                  key={plateform.id}
+                  onClick={() => {
+                    setIdblock({ idBlock: plateform.id });
+                    setSwitchName(plateform.list);
+                    handleCloseModal();
+                  }}
+                >
+                  {plateform.list}
+                </div>
+              ))}
+            </div>
+          </Modal>
+
+          {plateforms
+            .filter((plateform) => plateform.id === idBlock.idBlock)
+            .map((plateform) => (
+              <li key={plateform.id}>
+                <BugBounty
+                  title={plateform.title}
+                  alt={plateform.alt}
+                  img={plateform.img}
+                  paragraph={plateform.paragraph}
+                />
+              </li>
+            ))}
         </div>
+        <div className="containerButton">
+          <Button title="contact" href="/contact" variant="primary" />
+          <Button title="s'inscrire" href="/register" variant="secondary" />
+        </div>
+        <h2>{subtitle_back}</h2>
       </div>
     </article>
   );
