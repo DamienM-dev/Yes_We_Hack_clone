@@ -40,3 +40,10 @@ model Plateforme {
     list String
     paragraph String
 }
+
+model SliderPlateform {
+    id Int @id @default(autoincrement())
+    img String
+    alt String
+}
+

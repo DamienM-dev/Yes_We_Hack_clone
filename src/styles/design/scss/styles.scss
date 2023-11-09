@@ -1,3 +1,12 @@
+// ---------- => MOBILE
+// ********** => MEDIA QUERIES: 1024px
+
+// STYLE GENERAL
+
+li {
+  list-style-type: none;
+}
+
 @import "variable";
 
 // ---------- HOME STYLE ----------
@@ -115,6 +124,125 @@
     }
   }
 }
+
+// ---------- PLATEFORME ----------
+
+.containerPlateform {
+  padding-top: 80px;
+  background: url("/images/bg-product-mobile.png");
+  background-color: $blackColor;
+  color: $whiteColor;
+
+  .containerSubPlateform {
+    margin-bottom: 80px;
+
+    .containerImagesPlateformProduct {
+      margin-top: 15px;
+
+      .imagesPlateformProduct {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .titlesPlateformProduct {
+      font: {
+        size: 30px;
+        weight: 700;
+      }
+      line-height: 41px;
+    }
+
+    .paragraphsPlateformProduct {
+      font: {
+        family: $fontInter;
+        size: 20px;
+        weight: 400;
+      }
+      opacity: 0.7;
+
+      text-align: justify;
+    }
+
+    .titlePrincipalPlateforme {
+      text-align: center;
+      font-size: 30px;
+      line-height: 36px;
+      font-family: $fontSecondary;
+    }
+
+    .containerTopPlateform {
+      position: relative;
+      padding: 0 24px;
+    }
+
+    .containerList {
+      background-color: $redColor;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 8px;
+      position: relative;
+
+      .chevronDownPlateform {
+        position: absolute;
+        right: 20px;
+      }
+    }
+
+    .listPlateform {
+      display: block;
+      font: {
+        family: $fontGilroy;
+        weight: bolder;
+        size: 18px;
+      }
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+
+    .containerButtonPlateform {
+      padding: 0px 24px;
+    }
+
+    .containerUnderTablet {
+      display: none;
+    }
+  }
+  .containerImagesSlider {
+    width: 112px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+  }
+  .containerSubtitleBack {
+    margin: 0 24px;
+    text-align: center;
+
+    .subtitleBackPlateform {
+      text-transform: uppercase;
+      font: {
+        size: 20px;
+        weight: 700px;
+        family: $fontGilroy;
+      }
+      line-height: 28px;
+    }
+
+    .imagesSliderPlateforme {
+      width: 112px;
+      height: 64px;
+    }
+  }
+  .flexPlateform {
+    justify-content: center;
+    display: flex;
+  }
+  .MaxWidtContainerPlateform {
+    max-width: 672px;
+  }
+}
+
 // --------- STYLE FOR DIFFERENT BUTTON ---------
 
 .buttonPrimary {
@@ -125,10 +253,44 @@
   border: 1px solid $redColor;
 }
 
-// ---------- MEDIA QUERIES -----------
+// ---------- SLIDER ---------
+
+.swiper-button-disabled {
+  display: none !important;
+}
+.swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+// ---------- MODAL ---------
+
+.customModal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background-color: $whiteColor;
+  color: $blackColor;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Autres styles si nécessaire */
+}
+
+// ********** MEDIA QUERIES **********
 
 @include desktop-mini {
-  // ---------- HOME STYLE ----------
+  // ********** HOME STYLE **********
 
   .containerPrincipalHome {
     .containerHome {
@@ -143,7 +305,7 @@
     }
   }
 
-  // ---------- UTILITIES STYLE ----------
+  // *********** UTILITIES STYLE **********
   .containerPrincipalUtilities {
     display: flex;
     padding: {
@@ -152,14 +314,9 @@
     }
   }
 }
-// ---------- PLATEFORME ----------
-
-.listPlateform {
-  display: block;
-}
 
 @include desktop-down {
-  // ---------- HOME STYLE ----------
+  // ********** HOME STYLE ***********
 
   .containerPrincipalHome {
     .containerHome {
@@ -171,7 +328,7 @@
     }
   }
 
-  // --------- BUTTON --------
+  // ********** BUTTON **********
 
   .containerButton {
     display: flex;
@@ -179,6 +336,44 @@
   .containerButton {
     .blockButton {
       margin: 14px;
+    }
+  }
+}
+
+@include tableUp {
+  .containerList {
+    display: none !important;
+  }
+
+  .containerUnderTablet {
+    background-color: $lowBlackColor;
+    max-width: 936px;
+    display: flex !important;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin: 48px auto;
+
+    .containerTitleUnderTablet {
+      height: 74px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .containerTitleUnderTablet p {
+    span {
+      width: 150px;
+      margin: 10px;
+      display: block;
+      text-transform: uppercase;
+
+      font: {
+        size: 18px;
+        family: $fontGilroy;
+        weight: 600;
+      }
+      line-height: 20px;
     }
   }
 }

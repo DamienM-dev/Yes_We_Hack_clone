@@ -15,11 +15,21 @@ export default function BugBounty({
 }: BugBountyProps) {
   return (
     <article>
-      <div>
-        <div>
-          <Image src={img} alt={alt} height={500} width={500} />
-          <h2>{title}</h2>
-          <p>{paragraph}</p>
+      <div className="flexPlateform">
+        <div className="MaxWidtContainerPlateform">
+          <div className="containerImagesPlateformProduct">
+            <Image
+              src={img}
+              alt={alt}
+              height={500}
+              width={500}
+              className="imagesPlateformProduct"
+            />
+          </div>
+          <div>
+            <h2 className="titlesPlateformProduct">{title}</h2>
+            <p className="paragraphsPlateformProduct">{paragraph}</p>
+          </div>
         </div>
       </div>
     </article>
