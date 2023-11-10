@@ -113,45 +113,48 @@ export default function PlateformContainer() {
           />
         </div>
       </div>
-      <div className="containerSubtitleBack">
-        <h2 className="subtitleBackPlateform">{subtitle_back}</h2>
-        <Swiper
-          navigation={true}
-          modules={[Navigation]}
-          slidesPerView={2}
-          breakpoints={{
-            591: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            975: {
-              slidesPerView: 5,
-              spaceBetween: 40,
-            },
-            1621: {
-              slidesPerView: 8,
-              spaceBetween: 50,
-            },
-          }}
-          className="mySwiper"
-        >
-          {sliders.map((slider) => (
-            <SwiperSlide key={slider.id}>
-              <div className="containerImagesSlider">
-                <Image
-                  src={slider.img}
-                  alt={slider.alt}
-                  width={112}
-                  height={64}
-                  layout="responsive"
-                  objectFit="contain"
-                  className="imagesSliderPlateforme"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+
+      <section className="sectionBackSubtitle">
+        <div className="containerSubtitleBack">
+          <h2 className="subtitleBackPlateform">{subtitle_back}</h2>
+          <Swiper
+            navigation={true}
+            modules={[Navigation]}
+            slidesPerView={2}
+            breakpoints={{
+              591: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              975: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+              1200: {
+                slidesPerView: 8,
+                spaceBetween: 50,
+              },
+            }}
+            className="mySwiper"
+          >
+            {sliders.map((slider) => (
+              <SwiperSlide key={slider.id}>
+                <div className="containerImagesSlider">
+                  <Image
+                    src={slider.img}
+                    alt={slider.alt}
+                    width={112}
+                    height={64}
+                    layout="responsive"
+                    objectFit="contain"
+                    className="imagesSliderPlateforme"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </section>
     </article>
   );
 }

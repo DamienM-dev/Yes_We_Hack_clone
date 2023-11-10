@@ -26,7 +26,7 @@ export default function BugBounty({
               className="imagesPlateformProduct"
             />
           </div>
-          <div>
+          <div className="ContainerTitleParagraphe">
             <h2 className="titlesPlateformProduct">{title}</h2>
             <p className="paragraphsPlateformProduct">{paragraph}</p>
           </div>

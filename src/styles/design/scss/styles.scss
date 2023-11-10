@@ -128,13 +128,18 @@ li {
 // ---------- PLATEFORME ----------
 
 .containerPlateform {
+  width: 100%;
   padding-top: 80px;
+  text-align: center;
   background: url("/images/bg-product-mobile.png");
+
   background-color: $blackColor;
   color: $whiteColor;
 
   .containerSubPlateform {
     margin-bottom: 80px;
+    max-width: 1376px;
+    padding: 0 64px;
 
     .containerImagesPlateformProduct {
       margin-top: 15px;
@@ -202,7 +207,7 @@ li {
     }
 
     .containerButtonPlateform {
-      padding: 0px 24px;
+      padding: 0px 33px;
     }
 
     .containerUnderTablet {
@@ -218,6 +223,7 @@ li {
   .containerSubtitleBack {
     margin: 0 24px;
     text-align: center;
+    max-width: 1376px;
 
     .subtitleBackPlateform {
       text-transform: uppercase;
@@ -261,6 +267,9 @@ li {
 .swiper-slide {
   display: flex !important;
   justify-content: center !important;
+}
+.swiper-wrapper {
+  padding: 40px 0px !important;
 }
 
 // ---------- MODAL ---------
@@ -313,9 +322,36 @@ li {
       left: 64px;
     }
   }
+
+  // *********** PLATEFORM ************
+  .containerPlateform {
+    display: inline-block;
+
+    .containerSubPlateform {
+      display: inline-block;
+
+      .containerButtonPlateform {
+        justify-content: end;
+      }
+    }
+    .MaxWidtContainerPlateform {
+      max-width: 1376px;
+      display: flex;
+    }
+    .ContainerTitleParagraphe {
+      max-width: 512px;
+    }
+  }
 }
 
 @include desktop-down {
+  // ---------- SLIDER ---------
+
+  .swiper-wrapper {
+    justify-content: center !important;
+    padding: 48px 64px !important;
+  }
+
   // ********** HOME STYLE ***********
 
   .containerPrincipalHome {
@@ -326,6 +362,13 @@ li {
         width: auto;
       }
     }
+  }
+
+  // ********** PLATEFORM **********
+
+  .sectionBackSubtitle {
+    display: flex;
+    justify-content: center;
   }
 
   // ********** BUTTON **********
@@ -374,6 +417,17 @@ li {
         weight: 600;
       }
       line-height: 20px;
+    }
+  }
+  .containerButton {
+    margin-top: 0;
+  }
+  .containerPlateform {
+    .containerSubtitleBack {
+      .subtitleBackPlateform {
+        font-size: 24px;
+        line-height: 32px;
+      }
     }
   }
 }
