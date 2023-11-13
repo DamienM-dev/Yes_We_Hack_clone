@@ -15,19 +15,33 @@ const ALT_ARROW = "fleche de droite";
 
 function CardClient({ img, alt, paragraph, who, link }: CardClientProps) {
   return (
-    <div>
-      <div>
+    <div className="containerCardClient">
+      <div className="subContainerCardClient">
         <figure>
-          <Image src={img} alt={alt} height={70} width={120} />
+          <Image
+            src={img}
+            alt={alt}
+            height={70}
+            width={120}
+            object-fit="contain"
+            className="imageCardClient"
+          />
         </figure>
-        <p>{paragraph}</p>
-        <span>{who}</span>
-      </div>
-      <div>
-        <div>
-          {link ? <Link href={link}>{LINK}</Link> : null}
-
-          <Image src={ARROW} alt={ALT_ARROW} height={24} width={24} />
+        <p className="paragraphCardClient">{paragraph}</p>
+        <div className="whoCardClient">{who}</div>
+        <div className="linkCard">
+          {link ? (
+            <>
+              <Link href={link}>{LINK}</Link>
+              <Image
+                src={ARROW}
+                alt={ALT_ARROW}
+                height={24}
+                width={24}
+                object-fit="contain"
+              />
+            </>
+          ) : null}
         </div>
       </div>
     </div>

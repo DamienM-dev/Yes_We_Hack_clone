@@ -9,6 +9,9 @@ li {
 
 @import "variable";
 
+main {
+  background: $blackColor;
+}
 // ---------- HOME STYLE ----------
 
 .containerPrincipalHome {
@@ -248,8 +251,109 @@ li {
     max-width: 672px;
   }
 }
+// ----------- CLIENT ----------
+
+.containerPrincipalClient {
+  background-image: url("/images/bg-mobile-client.jpeg");
+  width: 100%;
+  padding: 48px 0px;
+  overflow: hidden;
+
+  h2 {
+    text-align: center;
+    line-height: 36px;
+    font: {
+      weight: bold;
+      size: 30px;
+      family: $fontGilroy;
+    }
+  }
+  .buttonSecondary {
+    color: $redColor;
+  }
+
+  .containerSubClient {
+    padding: 0px 24px;
+    margin: 0px auto;
+  }
+
+  .subContainerCardClient {
+    border: 1px solid $lowBlackColor;
+    border-radius: 16px;
+    padding: 32px;
+    margin: 32px 0px;
+
+    figure {
+      justify-content: center;
+      display: flex;
+    }
+
+    .paragraphCardClient {
+      font: {
+        size: 20px;
+        family: $fontInter;
+      }
+      line-height: 33px;
+      opacity: 0.7;
+    }
+
+    .whoCardClient {
+      margin-bottom: 24px;
+      font: {
+        size: 20px;
+        family: $fontPrincipal;
+      }
+      line-height: 28px;
+      text-transform: uppercase;
+    }
+  }
+  .linkCard {
+    display: flex;
+    align-items: center;
+    color: $redColor;
+    font: {
+      size: 20px;
+      family: $fontPrincipal;
+    }
+    line-height: 28px;
+
+    a {
+      margin-right: 8px;
+    }
+  }
+
+  .containerMainCardsClient {
+    justify-content: center;
+    display: flex;
+  }
+
+  .containerArrowSlider {
+    display: flex;
+    justify-content: center;
+
+    .arrowSlider {
+      margin: 0 12px;
+    }
+  }
+
+  .containerCardsClientTablet {
+    display: none;
+  }
+}
 
 // --------- STYLE FOR DIFFERENT BUTTON ---------
+
+.buttonPrimary,
+.buttonSecondary {
+  padding: 12px 32px;
+  text-align: center;
+  font: {
+    size: 18px;
+    family: $fontPrincipal;
+  }
+  list-style: 28px;
+  border-radius: 8px;
+}
 
 .buttonPrimary {
   background-color: $redColor;
@@ -268,7 +372,7 @@ li {
   display: flex !important;
   justify-content: center !important;
 }
-.swiper-wrapper {
+.sectionBackSubtitle .swiper-wrapper {
   padding: 40px 0px !important;
 }
 
@@ -342,6 +446,49 @@ li {
       max-width: 512px;
     }
   }
+
+  // ********** CLIENT **********
+  .containerPrincipalClient {
+    .containerCardsClientMobile,
+    .containerArrowSlider {
+      display: none;
+    }
+
+    .containerTtitleClient {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-size: 30px;
+        line-height: 45px;
+      }
+      .blockButton {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .containerSubClient {
+      padding: 0px 64px;
+      margin: 0 auto;
+      max-width: 1376px;
+    }
+
+    .containerCardsClientTablet {
+      display: flex;
+
+      .containerCardClient {
+        padding: 0 10px;
+      }
+    }
+    .subContainerCardClient {
+      max-width: 438px;
+      height: 760px;
+    }
+  }
+  .imageCardClient {
+    object-fit: contain;
+  }
 }
 
 @include desktop-down {
@@ -360,6 +507,7 @@ li {
 
       .centerDesktop {
         width: auto;
+        height: 100%;
       }
     }
   }
