@@ -23,6 +23,7 @@ export default function BugBounty({
               alt={alt}
               height={500}
               width={500}
+              loading="eager"
               className="imagesPlateformProduct"
             />
           </div>
