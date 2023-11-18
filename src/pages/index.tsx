@@ -1,3 +1,4 @@
+import ActualityContainer from "~/containers/actualityContainer/actualityContainer";
 import ClienContainer from "~/containers/clientContainer/clientContainer";
 import UtilityList from "~/containers/homeContainer/homeContainer";
 import HomePrincipalContainer from "~/containers/homeContainer/homePrincipalContainer";
@@ -9,6 +10,7 @@ export default function Home() {
       <UtilityList />
       <PlateformContainer />
       <ClienContainer />
+      <ActualityContainer />
     </main>
   );
 }

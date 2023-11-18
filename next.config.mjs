@@ -8,11 +8,14 @@ await import("./src/env.mjs");
 const config = {
   reactStrictMode: true,
   images: {
-    domains: ["www.yeswehack.com"],
     remotePatterns: [
       {
         protocol: "https",
         hostname: "**.sanity.io",
+      },
+      {
+        protocol: "https",
+        hostname: "**.yeswehack.com",
       },
     ],
   },

@@ -100,32 +100,6 @@ main {
 
 .containerButton {
   margin-top: 40px;
-
-  .blockButton {
-    text-align: center;
-
-    border-radius: 8px;
-    padding: 12px 32px;
-    transition: transform 0.1s ease;
-    max-width: 700px;
-    margin: 14px auto;
-
-    &:hover {
-      transform: scale(1.05, 1.05);
-      transition: transform 0.3s ease;
-    }
-
-    .buttonStyle {
-      color: $whiteColor;
-      line-height: 28px;
-      text-transform: uppercase;
-
-      font: {
-        family: $fontPrincipal;
-        size: 18px;
-      }
-    }
-  }
 }
 
 // ---------- PLATEFORME ----------
@@ -279,6 +253,7 @@ main {
 
   .subContainerCardClient {
     border: 1px solid $lowBlackColor;
+    background-color: $whiteColor;
     border-radius: 16px;
     padding: 32px;
     margin: 32px 0px;
@@ -307,20 +282,6 @@ main {
       text-transform: uppercase;
     }
   }
-  .linkCard {
-    display: flex;
-    align-items: center;
-    color: $redColor;
-    font: {
-      size: 20px;
-      family: $fontPrincipal;
-    }
-    line-height: 28px;
-
-    a {
-      margin-right: 8px;
-    }
-  }
 
   .containerMainCardsClient {
     justify-content: center;
@@ -341,7 +302,96 @@ main {
   }
 }
 
+// ---------- ACTUALITY ---------
+
+.containerComponantActualityTablet {
+  display: none;
+}
+
+.containerActuality {
+  text-align: initial;
+}
+
+.containerCardActuality {
+  max-width: 672px;
+
+  figure {
+    margin: 16px 0px;
+    img {
+      border-radius: 16px;
+    }
+  }
+
+  .paragraphActuality {
+    text-transform: uppercase;
+    font: {
+      size: 20px;
+      family: $fontGilroy;
+      weight: 700;
+    }
+    line-height: 28px;
+  }
+}
+
+.containerComponantActuality {
+  max-width: 1376px;
+  padding: 0px 24px;
+  margin: 0px auto;
+
+  h2 {
+    text-align: center;
+  }
+
+  .linkCard {
+    display: none;
+  }
+
+  .containerArrowSlider {
+    display: flex;
+    justify-content: center;
+
+    .arrowSlider img {
+      color: $whiteColor;
+    }
+  }
+}
+
+.titleActuality {
+  text-transform: uppercase;
+  font: {
+    size: 30px;
+    family: $fontGilroy;
+    weight: 700;
+  }
+  line-height: 36px;
+}
 // --------- STYLE FOR DIFFERENT BUTTON ---------
+
+.blockButton {
+  text-align: center;
+
+  border-radius: 8px;
+  padding: 12px 32px;
+  transition: transform 0.1s ease;
+  max-width: 700px;
+  margin: 14px auto;
+
+  &:hover {
+    transform: scale(1.05, 1.05);
+    transition: transform 0.3s ease;
+  }
+
+  .buttonStyle {
+    color: $whiteColor;
+    line-height: 28px;
+    text-transform: uppercase;
+
+    font: {
+      family: $fontPrincipal;
+      size: 18px;
+    }
+  }
+}
 
 .buttonPrimary,
 .buttonSecondary {
@@ -363,6 +413,25 @@ main {
   border: 1px solid $redColor;
 }
 
+// ----------- LINK ----------
+.linkCard {
+  display: flex;
+  align-items: center;
+  color: $redColor;
+  font: {
+    size: 20px;
+    family: $fontPrincipal;
+  }
+  line-height: 28px;
+
+  a {
+    margin-right: 8px;
+  }
+
+  img {
+    width: revert-layer !important;
+  }
+}
 // ---------- SLIDER ---------
 
 .swiper-button-disabled {
@@ -488,6 +557,61 @@ main {
   }
   .imageCardClient {
     object-fit: contain;
+  }
+
+  // ********** ACTUALITY *********
+
+  .containerPlateform.containerActuality {
+    padding: 80px 0px;
+  }
+
+  .blockButtonTitleActuality {
+    display: flex;
+    justify-content: space-between !important;
+  }
+
+  .containerActualityFlexMain {
+    max-width: 1376px;
+    padding: 0px 64px;
+    margin: 0 auto;
+
+    .linkCard {
+      display: flex;
+      align-content: center;
+    }
+  }
+  .containerCardActuality {
+    max-width: 388px;
+    background-color: $whiteColor;
+    border-radius: 16px;
+
+    figure {
+      margin: auto;
+
+      img {
+        border-radius: 16px 16px 0px 0px;
+      }
+    }
+  }
+  .containerComponantActualityTablet {
+    display: block;
+  }
+  .containerComponantActuality {
+    display: none;
+  }
+  .cointainerCardActualityFlex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+  .containerBotomCardActuality {
+    padding: 0px 24px 24px 24px;
+    a {
+      color: $redColor;
+    }
+    .paragraphActuality {
+      color: $blackColor;
+    }
   }
 }
 

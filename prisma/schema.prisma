@@ -55,3 +55,12 @@ model Client {
     who String
     link String?
 }
+
+model Actuality {
+
+id Int @id @default(autoincrement())
+img String
+alt String
+paragraph String
+link String
+}
