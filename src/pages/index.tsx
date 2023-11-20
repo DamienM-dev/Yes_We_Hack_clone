@@ -3,6 +3,7 @@ import ClienContainer from "~/containers/clientContainer/clientContainer";
 import UtilityList from "~/containers/homeContainer/homeContainer";
 import HomePrincipalContainer from "~/containers/homeContainer/homePrincipalContainer";
 import PlateformContainer from "~/containers/plateformContainer/platerformContainer";
+import WarningContainer from "~/containers/warningContainer/warningConainer";
 export default function Home() {
   return (
     <main>
@@ -11,6 +12,7 @@ export default function Home() {
       <PlateformContainer />
       <ClienContainer />
       <ActualityContainer />
+      <WarningContainer />
     </main>
   );
 }

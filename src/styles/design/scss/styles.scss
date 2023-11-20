@@ -235,7 +235,7 @@ main {
 
   h2 {
     text-align: center;
-    line-height: 36px;
+    line-height: 50px;
     font: {
       weight: bold;
       size: 30px;
@@ -411,6 +411,45 @@ main {
 
 .buttonSecondary {
   border: 1px solid $redColor;
+}
+
+//---------- WARNING ----------
+
+.containerPrincipalClient {
+  display: flex;
+  justify-content: center;
+}
+
+.containerWarningComponent {
+  max-width: 1376px;
+
+  h2 {
+    color: $redColor;
+  }
+  p.subtitleWarning {
+    font: {
+      size: 24px;
+      family: $fontGilroy;
+      weight: 700;
+    }
+    text-align: center;
+    line-height: 33px;
+  }
+  p.paragrapheWarning {
+    font: {
+      size: 20px;
+      family: $fontInter;
+      weight: 500;
+    }
+    text-align: center;
+    line-height: 33px;
+    opacity: 0.7;
+  }
+
+  .containerSecondaryWarning {
+    padding: 0 24px;
+    margin: 0 auto;
+  }
 }
 
 // ----------- LINK ----------
@@ -612,6 +651,21 @@ main {
     .paragraphActuality {
       color: $blackColor;
     }
+  }
+  // ********** WARNING **********
+  .containerWarningComponent {
+    h2 {
+      font-size: 48px;
+    }
+    line-height: 66px;
+
+    .containerSecondaryWarning {
+      padding: 0px 64px;
+    }
+  }
+  .blockButton {
+    width: 320px;
+    display: flex;
   }
 }
 
